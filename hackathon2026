@@ -1,0 +1,24 @@
+import time
+import random
+
+# 1. Setup our safety limit
+SAFETY_LIMIT = 50.0  # If water goes above 50cm, sound the alarm
+water_level = 10.0   # Starting water level in cm
+
+print(" Flood Sensor Active. Monitoring water levels... \n")
+
+# 2. Run the sensor loop
+while True:
+    # Simulate the water level rising by a random amount between 5 and 15 cm
+    water_level += random.uniform(5.0, 15.0)
+    
+    print(f"Current Water Level: {water_level:.1f} cm")
+    
+    # 3. Check if a flood is about to happen
+    if water_level >= SAFETY_LIMIT:
+        print("\n !ALARM!")
+        print(" WARNING: Water level has exceeded the safety limit!")
+        print(" FLOOD IMMINENT - PLEASE EVACUATE!")
+        break  # Stops the program after the alarm triggers
+        
+    time.sleep(1)  # Wait 1 second before checking again
