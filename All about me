@@ -1,0 +1,14 @@
+# All about me
+f = 13
+h = "07"   # keeps the leading zero
+s = 66
+
+print("Hello, Fathimah137!")
+print("All about me:")
+print(f"f = {f}")
+print(f"h = {h}")
+print(f"s = {s}")
+print(f"My name is Fathimah137")
+print(f"My favorite number is {f}")
+print(f"My code is {h}")
+print(f"My score is {s}")
